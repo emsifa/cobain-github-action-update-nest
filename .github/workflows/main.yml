@@ -31,4 +31,7 @@ jobs:
       - name: Bumping Version
         run: |
           sed -i "s/\"version\": \".*\"/\"version\": \"${GITHUB_REF#refs/tags/}\"/" egg.json
+      - name: Show egg.json file
+        run: |
+          cat egg.json
 
