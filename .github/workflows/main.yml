@@ -22,7 +22,7 @@ jobs:
           echo "::add-path::$HOME/.deno/bin"
       - name: Linking key
         env:
-          NEST_KEY: ${{ secrets.NestKey }}
+          NEST_KEY: ${{ secrets.NEST_KEY }}
         run: |
           eggs link --key $NEST_KEY
       - name: Echoing TAG
