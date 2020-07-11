@@ -1,0 +1,11 @@
+{
+    "name": "mymodule",
+    "description": "a thing",
+    "version": "0.9.0",
+    "stable": false,
+    "repository": "https://github.com/emsifa/validasaur",
+    "files": [
+      "./**/*",
+      "./README.md"
+    ]
+  }

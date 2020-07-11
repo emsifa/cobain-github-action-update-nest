@@ -28,4 +28,7 @@ jobs:
       - name: Echoing TAG
         run: |
           echo ${GITHUB_REF#refs/tags/}
+      - name: Bumping Version
+        run: |
+          sed -i "s/\"version\": \".*\"/\"version\": \"${GITHUB_REF#refs/tags/}\"/" egg.json
 
