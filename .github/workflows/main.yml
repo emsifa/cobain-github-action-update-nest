@@ -17,6 +17,9 @@ jobs:
       - name: Install eggs CLI
         run: |
           deno install -A -f --unstable -n eggs https://x.nest.land/eggs@0.1.8/mod.ts
+      - name: Adding deno bin PATH
+        run: |
+          echo "::add-path::$HOME/.deno/bin"
       - name: Linking key
         env:
           NEST_KEY: ${{ secrets.NestKey }}
